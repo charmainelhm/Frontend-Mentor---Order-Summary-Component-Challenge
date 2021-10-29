@@ -5,18 +5,13 @@
   --color-hover: hsl(245, 83%, 68%);
   --color-body: hsl(225, 100%, 98%);
   --color-body-darker: #f8f9fe; /* media bg color */
-  --border-radiius: 10px;
+  --border-radius: 10px;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-.container {
-  max-width: 350px;
-  margin: 0 auto;
 }
 
 html {
@@ -35,7 +30,7 @@ h2 {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -52,12 +47,13 @@ a {
 /* Buttons */
 .btn {
   background-color: var(--color-accent);
-  border-radius: var(--border-radiius);
+  border-radius: var(--border-radius);
   box-shadow: 0 15px 20px 5px #dedbf8;
   color: var(--color-body);
   display: inline-block;
-  padding: 1em 7em;
+  padding: 1em 0;
   text-decoration: none;
+  width: 100%;
 }
 
 .btn:hover {
@@ -70,7 +66,7 @@ a {
   display: flex;
   justify-content: space-between;
   background-color: var(--color-body-darker);
-  border-radius: var(--border-radiius);
+  border-radius: var(--border-radius);
   padding: 2.5rem 2rem;
 }
 
@@ -106,4 +102,40 @@ a {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Main Card */
+.card {
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 0 20px 5px #dedbf8;
+}
+
+.card__body {
+  padding: 2.4rem 5rem 4rem;
+}
+
+.card__description {
+  max-width: 30rem;
+  margin: 0 auto 2.1rem;
+  line-height: 1.5;
+}
+
+.card__links {
+  color: var(--color-secondary);
+  text-decoration: none;
+  margin: 3rem 0;
+}
+
+.card__links:hover {
+  color: var(--color-primary);
+  transition: color 0.1s ease-in;
+}
+
+.card__body .plans,
+.btn {
+  margin-bottom: 2.1rem;
 }
