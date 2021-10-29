@@ -103,22 +103,31 @@ a {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: fixed;
+  bottom: 1%;
+  width: 100%;
 }
-.attribution a {
+.attribution > a {
   color: hsl(228, 45%, 44%);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /* Main Card */
 .card {
-  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 450px;
-  margin: 0 auto;
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 0 20px 5px #dedbf8;
+  background-color: var(--color-body);
 }
 
 .card__body {
+  text-align: center;
   padding: 2.4rem 5rem 4rem;
 }
 
