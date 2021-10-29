@@ -4,13 +4,19 @@
   --color-accent: hsl(245, 75%, 52%); /* accent */
   --color-hover: hsl(245, 83%, 68%);
   --color-body: hsl(225, 100%, 98%);
-  --color-body-darker: hsl(225, 48%, 86%); /* media bg color */
+  --color-body-darker: #f8f9fe; /* media bg color */
+  --border-radiius: 10px;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 html {
@@ -23,20 +29,81 @@ body {
   font-size: 1.6rem;
 }
 
+h1,
+h2 {
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+a {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
 /* Buttons */
 .btn {
   background-color: var(--color-accent);
-  border-radius: 8px;
+  border-radius: var(--border-radiius);
   box-shadow: 0 15px 20px 5px #dedbf8;
   color: var(--color-body);
   display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 1em 6em;
+  padding: 1em 7em;
   text-decoration: none;
 }
 
 .btn:hover {
   background-color: var(--color-hover);
   transition: background-color 0.2s ease-in;
+}
+
+/* Plans */
+.plans {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-body-darker);
+  border-radius: var(--border-radiius);
+  padding: 2.5rem 2rem;
+}
+
+.plans__details {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.plans__descriptions h2 {
+  margin: 0 0 0.8rem;
+}
+
+.plans__descriptions p {
+  margin: 0;
+}
+
+.plans__option {
+  align-self: center;
+  color: var(--color-accent);
+}
+
+.plans__option:hover {
+  text-decoration: none;
+  color: var(--color-hover);
+}
+
+/* Attributions */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
