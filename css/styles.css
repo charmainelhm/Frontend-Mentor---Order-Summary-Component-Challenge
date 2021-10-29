@@ -16,6 +16,10 @@
 
 html {
   font-size: 62.5%;
+  background-color: #e0e8ff;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
